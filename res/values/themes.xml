@@ -1,0 +1,18 @@
+<resources
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<style name="Mysms" parent="android:Theme.Holo">
+		<item name="isUpdate">false</item>
+
+		<item name="messageEditorBackground">@drawable/message_editor_background</item>
+		<item name="conversationListItemNameStyle">@style/ConversationListItemName</item>
+		<item name="conversationListItemSnippetStyle">@style/ConversationListItemSnippet</item>
+		<item name="conversationListAttachmentDrawable">@drawable/attachment</item>
+		<item name="attachmentBackground">@color/attachment_background</item>
+		<item name="attachmentsBackground">@drawable/attachments_background</item>
+		<item name="sheetBackground">#23282d</item>
+		<item name="routingInviteIcon">@drawable/ab_add_person</item>
+
+		<item name="android:actionMenuTextColor">@android:color/white</item>
+	</style>
+</resources>
