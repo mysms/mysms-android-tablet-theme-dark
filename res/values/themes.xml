@@ -10,6 +10,7 @@
 		<item name="conversationListAttachmentDrawable">@drawable/attachment</item>
 		<item name="attachmentBackground">@color/attachment_background</item>
 		<item name="attachmentsBackground">@drawable/attachments_background</item>
+		<item name="composeMessageBackground">#000</item>
 		<item name="sheetBackground">#23282d</item>
 		<item name="routingInviteIcon">@drawable/ab_add_person</item>
 
