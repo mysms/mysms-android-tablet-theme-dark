@@ -16,4 +16,14 @@
 
 		<item name="android:actionMenuTextColor">@android:color/white</item>
 	</style>
+
+	<style name="Mysms.Popup" parent="android:Theme.Holo.Dialog">
+		<item name="messageEditorBackground">@drawable/message_editor_background</item>
+		<item name="popupListBackground">#23282d</item>
+		<item name="actionbarBackground">@drawable/actionbar_background</item>
+
+		<item name="android:windowIsFloating">false</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowIsTranslucent">true</item>
+	</style>
 </resources>
