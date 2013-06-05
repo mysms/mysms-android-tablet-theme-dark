@@ -7,4 +7,10 @@
 	<style name="ConversationListItemSnippet">
 		<item name="android:textColor">@color/conversation_list_item_snippet</item>
 	</style>
+
+	<style name="MessageListDateSeparator">
+		<item name="android:textColor">@color/message_list_date_separator_color</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:gravity">center</item>
+	</style>
 </resources>

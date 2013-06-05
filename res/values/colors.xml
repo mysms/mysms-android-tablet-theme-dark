@@ -2,4 +2,5 @@
 <resources>
 	
 	<color name="attachment_background">#43484d</color>
+	<color name="message_list_date_separator_color">#bebebe</color>
 </resources>
