@@ -16,6 +16,11 @@
 		<item name="messageListDateSeparatorStyle">@style/MessageListDateSeparator</item>
 
 		<item name="android:actionMenuTextColor">@android:color/white</item>
+
+		<item name="feedbackLikeIcon">@drawable/feedback_like</item>
+		<item name="feedbackProblemIcon">@drawable/feedback_problem</item>
+		<item name="feedbackMailIcon">@drawable/feedback_mail</item>
+		<item name="feedbackFooterStyle">@style/FeedbackFooter</item>
 	</style>
 
 	<style name="Mysms.Popup" parent="android:Theme.Holo.Dialog">

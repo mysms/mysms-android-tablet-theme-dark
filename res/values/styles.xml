@@ -13,4 +13,8 @@
 		<item name="android:textStyle">bold</item>
 		<item name="android:gravity">center</item>
 	</style>
+
+	<style name="FeedbackFooter">
+		<item name="android:textColor">#bebebe</item>
+	</style>
 </resources>
