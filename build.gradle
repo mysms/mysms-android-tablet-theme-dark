@@ -55,7 +55,7 @@ android {
     }
 
     dependencies {
-        compile 'com.mysms.android:mysms-android-theme-base:1.0'
+        compile 'com.mysms.android:mysms-android-tablet-theme-base:1.0'
     }
 
     buildTypes {
