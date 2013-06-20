@@ -23,7 +23,7 @@ android {
         versionName '1.3-SNAPSHOT'
         versionCode 5
         
-        minSdkVersion 5
+        minSdkVersion 12
         targetSdkVersion 17
     }
     sourceSets {
