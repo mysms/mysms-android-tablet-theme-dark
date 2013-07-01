@@ -21,6 +21,9 @@
 		<item name="feedbackProblemIcon">@drawable/feedback_problem</item>
 		<item name="feedbackMailIcon">@drawable/feedback_mail</item>
 		<item name="feedbackFooterStyle">@style/FeedbackFooter</item>
+
+		<item name="typingActivatedDrawable">@drawable/typing_dot_white</item>
+		<item name="typingNotActivatedDrawable">@drawable/typing_dot_white</item>
 	</style>
 
 	<style name="Mysms.Popup" parent="android:Theme.Holo.Dialog">
