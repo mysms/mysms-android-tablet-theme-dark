@@ -24,6 +24,12 @@
 
 		<item name="typingActivatedDrawable">@drawable/typing_dot_white</item>
 		<item name="typingNotActivatedDrawable">@drawable/typing_dot_white</item>
+
+		<item name="emojiSmileyButtonDrawable">@drawable/smiley_button</item>
+		<item name="emojiKeyboardIconDrawable">@drawable/keyboard_icon</item>
+		<item name="emojiKeyboardCloseDrawable">@drawable/keyboard_close</item>
+
+		<item name="composeBackgroundColor">#2032b2e1</item>
 	</style>
 
 	<style name="Mysms.Popup" parent="android:Theme.Holo.Dialog">
