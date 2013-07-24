@@ -37,6 +37,7 @@
 		<item name="popupListBackground">#23282d</item>
 		<item name="actionbarBackground">@drawable/actionbar_background</item>
 		<item name="messageListDateSeparatorStyle">@style/MessageListDateSeparator</item>
+		<item name="emojiSmileyButtonDrawable">@drawable/smiley_button</item>
 
 		<item name="android:windowIsFloating">false</item>
 		<item name="android:windowNoTitle">true</item>
