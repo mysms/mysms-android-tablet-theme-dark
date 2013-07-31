@@ -63,12 +63,8 @@ android {
             versionCode 1
         }
 
-        play {
-            flavorGroup "store"
-        }
-        amazon {
-            flavorGroup "store"
-        }
+        play { flavorGroup "store" }
+        amazon { flavorGroup "store" }
     }
 
     dependencies {
