@@ -12,11 +12,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.mysms.android.tablet.theme.dark.R;
 
 public class ThemeActivity extends Activity {
-	
-	private static final String MYSMS_PACKAGE_NAME = "com.mysms.android.tablet";
 	
 	@Override
 	public void onCreate(final Bundle savedInstanceState) {
@@ -31,6 +30,8 @@ public class ThemeActivity extends Activity {
 	
 	@Override
 	protected Dialog onCreateDialog(final int id) {
+        final String packageName = getString(R.string.app_package_name);
+        final String marketUrl = getString(R.string.market_url, packageName);
 		
 		final View messageView = LayoutInflater.from(this).inflate(R.layout.theme_dialog, null);
 		final TextView primaryMessageTextView = (TextView) messageView.findViewById(R.id.primary_message);
@@ -43,7 +44,7 @@ public class ThemeActivity extends Activity {
 		/* check if mysms is installed */
 		ApplicationInfo applicationInfo = null;
 		try {
-			applicationInfo = getPackageManager().getApplicationInfo(MYSMS_PACKAGE_NAME, 0);
+			applicationInfo = getPackageManager().getApplicationInfo(packageName, 0);
 		} catch (final Exception e) {
 		}
 		
@@ -51,7 +52,7 @@ public class ThemeActivity extends Activity {
 			final DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
 				public void onClick(final DialogInterface dialog, final int which) {
 					try {
-						Intent i = getPackageManager().getLaunchIntentForPackage(MYSMS_PACKAGE_NAME);
+						Intent i = getPackageManager().getLaunchIntentForPackage(packageName);
 						i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 						i.putExtra(ThemeConstants.INTENT_EXTRA_THEME_ACTIVATE, getPackageName());
 						startActivity(i);
@@ -70,7 +71,7 @@ public class ThemeActivity extends Activity {
 			final DialogInterface.OnClickListener listener = new DialogInterface.OnClickListener() {
 				public void onClick(final DialogInterface dialog, final int which) {
 					try {
-						final Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.market_url))).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+						final Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(marketUrl)).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 						startActivity(i);
 					} catch (final Exception e) {
 					}

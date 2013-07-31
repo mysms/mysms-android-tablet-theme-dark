@@ -6,7 +6,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.4.2'
+        classpath 'com.android.tools.build:gradle:0.5.+'
     }
 }
 
@@ -20,9 +20,6 @@ android {
     buildToolsVersion '17'
 
     defaultConfig {
-        versionName '1.5-SNAPSHOT'
-        versionCode 7
-        
         minSdkVersion 12
         targetSdkVersion 17
     }
@@ -49,9 +46,29 @@ android {
         buildTypes.release.signingConfig = null
     }
 
+    flavorGroups "target-app", "store"
+
     productFlavors {
-        play {}
-        amazon {} 
+        tablet {
+            flavorGroup "target-app"
+            packageName "com.mysms.android.tablet.theme.dark"
+            versionName '1.5-SNAPSHOT'
+            versionCode 7
+        }
+
+        mirror {
+            flavorGroup "target-app"
+            packageName "com.mysms.android.mirror.theme.dark"
+            versionName '1.0-SNAPSHOT'
+            versionCode 1
+        }
+
+        play {
+            flavorGroup "store"
+        }
+        amazon {
+            flavorGroup "store"
+        }
     }
 
     dependencies {
@@ -63,14 +80,18 @@ android {
             signingConfig signingConfigs.release
         }
         applicationVariants.each { variant ->
+            def regex = "^.*(tablet|mirror)(play|amazon).*\$";
             def apk = variant.packageApplication.outputFile;
-            def newName = "mysms-tablet-theme-dark-" + variant.baseName.replace("-release", "") + (apk.name.contains("-unaligned") ? "-unaligned" : "") + "-" + defaultConfig.versionName + ".apk";
+            def app = variant.baseName.replaceAll(regex, "\$1");
+            def store = variant.baseName.replaceAll(regex, "\$2");
+
+            def newName = "mysms-" + app + "-theme-dark-" + store + (apk.name.contains("-unaligned") ? "-unaligned" : "") + "-" + variant.mergedFlavor.versionName + ".apk";
 
             if (variant.zipAlign) {
                 variant.packageApplication.outputFile = new File(apk.parentFile, newName);
                 variant.zipAlign.outputFile = new File(apk.parentFile, newName.replace("-unaligned", ""));
             } else {
-	              variant.packageApplication.outputFile = new File(apk.parentFile, newName.replace("-unaligned", ""));
+                variant.packageApplication.outputFile = new File(apk.parentFile, newName.replace("-unaligned", ""));
             }
         }
     }
