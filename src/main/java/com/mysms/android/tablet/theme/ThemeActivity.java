@@ -64,7 +64,7 @@ public class ThemeActivity extends Activity {
 			secondaryMessageTextView.setText(R.string.theme_dialog_activate_secondary_text);
 			builder.setPositiveButton(R.string.theme_dialog_activate_text, listener);
 		} else {
-			
+
 			primaryMessageTextView.setText(R.string.theme_dialog_install_primary_text);
 			secondaryMessageTextView.setText(R.string.theme_dialog_install_secondary_text);
 

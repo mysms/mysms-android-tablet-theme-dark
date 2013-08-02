@@ -1,5 +1,5 @@
 local.properties
+/.gradle
 /bin
 /assets
 /gen
-/release
