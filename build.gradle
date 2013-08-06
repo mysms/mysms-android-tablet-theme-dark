@@ -75,7 +75,7 @@ android {
         release {
             signingConfig signingConfigs.release
         }
-        applicationVariants.each { variant ->
+        applicationVariants.all { variant ->
             def regex = "^.*(tablet|mirror)(play|amazon).*\$";
             def apk = variant.packageApplication.outputFile;
             def app = variant.baseName.replaceAll(regex, "\$1");
