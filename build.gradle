@@ -63,8 +63,8 @@ android {
         mirror {
             flavorGroup "target-app"
             packageName "com.mysms.android.mirror.theme.dark"
-            versionName '1.0-SNAPSHOT'
-            versionCode 2
+            versionName '1.1-SNAPSHOT'
+            versionCode 3
         }
 
         play { flavorGroup "store" }
