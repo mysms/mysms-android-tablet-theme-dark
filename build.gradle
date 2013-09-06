@@ -98,7 +98,7 @@ android {
                             include "${variant.dirName}/AndroidManifest.xml"
                         }
                         into("${buildDir}/filtered_manifests")
-                        filter { String line -> line.replaceAll("<supports-screens(.*)/>", screens) }
+                        filter { line -> line.replaceAll("<supports-screens(.*)/>", screens) }
                     }
 
                     // use the new manifest from now on
