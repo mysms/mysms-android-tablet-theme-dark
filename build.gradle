@@ -63,7 +63,7 @@ android {
         mirror {
             flavorGroup "target-app"
             packageName "com.mysms.android.mirror.theme.dark"
-            versionName '1.1-SNAPSHOT'
+            versionName '1.0-SNAPSHOT'
             versionCode 2
         }
 
@@ -84,6 +84,29 @@ android {
             def apk = variant.packageApplication.outputFile;
             def app = variant.baseName.replaceAll(regex, "\$1");
             def store = variant.baseName.replaceAll(regex, "\$2");
+
+            // update screen definitions after merging the manifest
+            variant.processManifest.doLast {
+                def screensFile = "src/${app}/screens.xml"
+                try {
+                    // get screens from file
+                    def screens = file(screensFile).text
+
+                    // overwrite screen definitions in a copy of the already merged manifest
+                    copy {
+                        from("${buildDir}/manifests") {
+                            include "${variant.dirName}/AndroidManifest.xml"
+                        }
+                        into("${buildDir}/filtered_manifests")
+                        filter { String line -> line.replaceAll("<supports-screens(.*)/>", screens) }
+                    }
+
+                    // use the new manifest from now on
+                    variant.processResources.manifestFile = file("${buildDir}/filtered_manifests/${variant.dirName}/AndroidManifest.xml")
+                } catch (e){
+                    // file does not exist ... keep default screen definitions
+                }
+			}
 
             def newName = "mysms-" + app + "-theme-dark-" + store + (apk.name.contains("-unaligned") ? "-unaligned" : "") + "-" + variant.mergedFlavor.versionName + ".apk";
 
