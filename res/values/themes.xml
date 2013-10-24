@@ -37,6 +37,10 @@
 		<item name="messageIncomingDateColor">#808080</item>
 		<item name="messageOutgoingBodyColor">#ffffff</item>
 		<item name="messageOutgoingDateColor">#999999</item>
+
+		<item name="callListItemNameStyle">@style/CallListItemName</item>
+		<item name="callListItemDurationStyle">@style/CallListItemDuration</item>
+		<item name="callListItemDateStyle">@style/CallListItemDate</item>
 	</style>
 
 	<style name="Mysms.Popup" parent="android:Theme.Holo.Dialog">
@@ -49,5 +53,8 @@
 		<item name="android:windowIsFloating">false</item>
 		<item name="android:windowNoTitle">true</item>
 		<item name="android:windowIsTranslucent">true</item>
+
+		<item name="callPopupNameStyle">@style/CallPopupName</item>
+		<item name="callPopupNumberStyle">@style/CallPopupNumber</item>
 	</style>
 </resources>

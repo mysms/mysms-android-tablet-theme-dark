@@ -17,4 +17,24 @@
 	<style name="FeedbackFooter">
 		<item name="android:textColor">#bebebe</item>
 	</style>
+
+	<style name="CallListItemName">
+		<item name="android:textColor">@color/conversation_list_item_name</item>
+	</style>
+
+	<style name="CallListItemDuration">
+		<item name="android:textColor">@color/conversation_list_item_snippet</item>
+	</style>
+
+	<style name="CallListItemDate">
+		<item name="android:textColor">@color/conversation_list_item_snippet</item>
+	</style>
+
+	<style name="CallPopupName">
+		<item name="android:textColor">#f3f3f3</item>
+	</style>
+
+	<style name="CallPopupNumber">
+		<item name="android:textColor">#bebebe</item>
+	</style>
 </resources>
