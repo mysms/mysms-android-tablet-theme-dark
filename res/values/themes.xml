@@ -41,6 +41,8 @@
 		<item name="callListItemNameStyle">@style/CallListItemName</item>
 		<item name="callListItemDurationStyle">@style/CallListItemDuration</item>
 		<item name="callListItemDateStyle">@style/CallListItemDate</item>
+
+		<item name="activeCallBackgroundColor">#3300b4d8</item>
 	</style>
 
 	<style name="Mysms.Popup" parent="android:Theme.Holo.Dialog">
