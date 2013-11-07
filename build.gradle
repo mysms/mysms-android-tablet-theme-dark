@@ -57,14 +57,14 @@ android {
         tablet {
             flavorGroup "target-app"
             packageName "com.mysms.android.tablet.theme.dark"
-            versionName '1.5-SNAPSHOT'
+            versionName '1.6-SNAPSHOT'
             versionCode 7
         }
 
         mirror {
             flavorGroup "target-app"
             packageName "com.mysms.android.mirror.theme.dark"
-            versionName '1.1-SNAPSHOT'
+            versionName '1.2-SNAPSHOT'
             versionCode 3
         }
 
